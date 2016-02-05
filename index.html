@@ -1,263 +1,103 @@
 <html>
-    <head>
-        <style>
-            body {
-                font-family: Cardo, serif;
-                color: white;
-                text-align: center;
-                text-shadow: -1px -2px rgba(0,0,0,0.2);
-            }
-            
-            ul{
-                text-align: left;
-                display: inline-block;
-            }
-            
-            li {
-                font-size: 1.5em;
-                padding: 1em;
-            }
-            
-            h1 {
-                padding-top: 1em;
-                font-size: 6em;
-            }
-            
-            h2 {
-                font-size: 3em;
-            }
-            
-            p {
-    max-width: 600px;
-    text-align: left;
-    display: inline-block;
-    padding: 5px;
-}
-            
-           
-            .thin{
-                font-weight: 100;
-            }
-            
-            .opacity-0 { opacity: 0; }
-            .opacity-1 { opacity: 1; }
-            .bg-blue { background: #0084D1; }
-            .bg-yellow {background: #F3A200; }
-            .bg-red {background: #DD1C1A; }
-            .bg-white {background: #F1FAEE; }
-            .bg-green {background: #17B517; }
-            
-            .square{
-                height: 100px;
-                width: 100px;
-                position: relative;
-                box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
-                border-radius: 3px;
-            }
-            
-            .square.decoration{
-                position: absolute;
-                transition: opacity 2s ease-in;
-            }
-            
-            #square-container{
-                width: 0px;
-                height: 0px;
-                overflow: visible;
-                position: absolute;
-                padding: 0px;
-                margin: 0px;
-                bottom: -70px;
-                left: -20px;
-                transform: rotate(-45deg);
-            }
-            
-            #center-square{
-                transition: height 1.5s ease-in, width 1.5s ease-in, margin 1.5s ease-in;
-                animation: spin 5s linear infinite;
-                z-index: 10;
-            }
-            
-            #center-square.expanding{
-                animation: none;
-                height: 3000px;
-                width: 3000px;
-                z-index: 10;
-                margin: -1500px -1500px;
-            }
-            
-            .screen{
-                transition: opacity 2s;
-            }
-            
-            .square.button{
-                position: relative;
-                display: inline-block;
-                margin: 10px;
-                text-align: center;
-                cursor: pointer;
-            }
-            
-            .square.button:hover{
-                box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.15);
-            }
-            
-            .square.button > span{
-                display: inline-block;
-                padding-top: 36px;
-                font-size: 20px;    
-            }
-            .square.button.expanding{
-                position: fixed;
-                margin: 0;
-                transition: height .8s ease-in, width .8s ease-in, top .8s ease-in, left .8s ease-in;
-            }
-            
-            .no-animation{
-                animation: none !important;
-            }
-            
-            .hidden {
-                display: none;
-            }
-            
-            
-            // --- \\ SPINNING FRAMES // --- \\
-            @-ms-keyframes spin { 
-                from { -webkit-transform: rotate(0deg); }
-                to { -webkit-transform: rotate(360deg); }
-            }
-            @-moz-keyframes spin { 
-                from { -webkit-transform: rotate(0deg); }
-                to { -webkit-transform: rotate(360deg); }
-            }
-            @-webkit-keyframes spin { 
-                from { -webkit-transform: rotate(0deg); }
-                to { -webkit-transform: rotate(360deg); }
-            }
-            @keyframes spin { 
-                from { -webkit-transform: rotate(0deg); }
-                to { -webkit-transform: rotate(360deg); }
-            }
-            
-        </style>
-    </head>
-    
-    <body id="body" class="bg-white">
-        <div id="square-template" class="square bg-blue" style="display:none;"></div>
-        <div id="square-container"></div>
-    
-    
-        <div id="home-screen" class="screen opacity-0 hidden" data-color="red">
-            <h1><i>Code that Delights.</i></h1>
-            <h2>Inquisitive, Intuitive, Intentional.  Clean.</h2>
-            <ul>
-                <li>Lightweight, Intuitive UX that Delights and Surprises</li>
-                <li>Full Stack Web-Development in Python/Django and Java EE</li>
-                <li>Theoretical Forrays in Graph Isomorphism, Tree Enumeration, Vector Sorting</li>
-                <li>Unit Tests that Test Engineers Dream about at Night</li>
-            </ul>
-            <h2>Welcome to my portfolio.</h2>
-            <br/>
-            <div>
-                <div id="home-about" data-page-link="about" class="square button bg-yellow"><span>About</span></div>
-                <div id="home-projects" data-page-link="projects" class="square button bg-blue"><span>Projects</span></div>
-                <div id="home-contact" data-page-link="contact" class="square button bg-green"><span>Contact</span></div>
-            </div>
-        </div>
+<head>
+<style>body{font-family:Cardo,serif;color:white;text-align:center;text-shadow:-1px -2px rgba(0,0,0,0.2)}a{color: inherit;}ul{text-align:left;display:inline-block}li{font-size:1.5em;padding:1em}h1{padding-top:1em;font-size:6em}h2{font-size:3em}p{max-width:600px;text-align:left;display:inline-block;padding:5px}.thin{font-weight:100}.opacity-0{opacity:0}.opacity-1{opacity:1}.bg-blue{background:#17419B}.bg-purple{background:#5F0D96}.bg-red{background:#B72D00}.bg-orange{background:#D8A200}.bg-white{background:#F7FFF4}.bg-green{background:#1C8200}.square{height:100px;width:100px;position:relative;box-shadow:0 2px 5px 2px rgba(0,0,0,0.2);border-radius:3px}.square.decoration{position:absolute;transition:opacity 2s ease-in}#square-container{width:0;height:0;overflow:visible;position:absolute;padding:0;margin:0;bottom:-70px;left:-20px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);}#center-square{transition:height 1.5s ease-in,width 1.5s ease-in,margin 1.5s ease-in;animation:spin 5s linear infinite;z-index:10}#center-square.expanding{animation:none;height:3000px;width:3000px;z-index:10;margin:-1500px -1500px}.screen{transition:opacity 2s}.square.button{position:relative;display:inline-block;margin:10px;text-align:center;cursor:pointer}.square.button:hover{box-shadow:0 3px 10px 5px rgba(0,0,0,0.15)}.square.button>span{display:inline-block;padding-top:36px;font-size:20px}.square.button.expanding{position:fixed;margin:0;transition:height .8s ease-in,width .8s ease-in,top .8s ease-in,left .8s ease-in}.no-animation{animation:none!important}.hidden{display:none}// --- \\ SPINNING FRAMES // --- \\ @-ms-keyframes spin{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}@-moz-keyframes spin{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}@-webkit-keyframes spin{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}@keyframes spin{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}</style>
+</head>
+<body id="body" class="bg-white">
+<div id="square-template" class="square bg-blue" style="display:none"></div>
+<div id="square-container"></div>
+<div id="home-screen" class="screen opacity-0 hidden" data-color="red">
+<h1><i>Passionate Projects.</i></h1>
+<h2>Inquisitive, Intuitive, Intentional.</h2>
+<ul>
+<li>Lightweight, Intuitive UX that Delights and Surprises</li>
+<li>Theoretical Forrays in Graph Isomorphism, Tree Enumeration, Vector Sorting</li>
+<li>Full Stack Web-Development in Python, Node and Java on Google and Amazon Clouds</li>
+<li>Smart Unit Tests</li>
+</ul>
+<h2>Welcome to my portfolio.</h2>
+<br/>
+<div>
+<div id="home-about" data-page-link="about" class="square button bg-purple"><span>About</span></div>
+<div id="home-projects" data-page-link="projects" class="square button bg-blue"><span>Projects</span></div>
+<div id="home-contact" data-page-link="contact" class="square button bg-green"><span>Contact</span></div>
+</div>
+</div>
+<div id="about-screen" class="screen opacity-0 hidden" data-color="purple">
+<h1><i>About Me</i></h1>
+<h2>Who Am I?</h2>
+<h3>Background : Essex (Junction), Vermont</h3>
+<h3>Student : Brandeis University '16</h3>
+<h3>Majors : Computer Science (BS), Economics, Math</h3>
+<h3>Department : Seven Semester TA, Research, Thesis</h3>
+<h3>Extra : Student Union, Cross Country + Track, PBK</h3>
+<h3>Interests : Educational Technology, Graph Theory</h3>
+<h3>Next : Working at Google in Mountain View (August)</h3>
+<br>
+<h3><a href="/resume.pdf">Resume</a></h3></h3>
+<p>
+The best times in my life have been when I get to explore things that confuse and excite me.
+That manifests as learning new programming techniques, pursuing mile times, and
+dreaming up technologies, problems, and solutions.
+</p>
+<br>
+<p>
+I am a firm believer in Bus/Plane/Train conversations. In intentionally and deliberatley
+extending toll booth workers a conversation. In the beauty and importance of our stories and
+memories. As such, I love first dates, podcasts, and the New York Times. I have
+no opinions on fame, fashion, or oxford commas.
+</p>
+<br>
+<p>
+Dirt roads, shoes, and engineering notebooks number amoung my favorite things. A territorial Vermonter, I drink cider, then wine, then beer. Casual political remarks are never ignored.
+</p>
+<div>
+<div id="about-home" data-page-link="home" class="square button bg-red"><span>Home</span></div>
+<div id="about-projects" data-page-link="projects" class="square button bg-blue"><span>Projects</span></div>
+<div id="about-contact" data-page-link="contact" class="square button bg-green"><span>Contact</span></div>
+</div>
+</div>
+<div id="projects-screen" class="screen opacity-0 hidden" data-color="blue">
+<h1><i>Projects.</i></h1>
+<h2>Active projects are avaible on <a href="https://www.github.com/gbdubs">Github</a>!<h2>
+<h3>WIP Highlights</h3>
+<ul>
+	<li><a href="https://www.github.com/gbdubs/thesis">Thesis</a> - My Thesis on teh Graph Isomorphism Problem</li>
+	<li><a href="https://www.github.com/gbdubs/graphfyi">GraphFYI</a> - A Truly Random Graph Generator and Database</li>
+</ul>
+<h3>Completed Highlights</h3>
+<ul>
+	<li><a href="https://www.github.com/gbdubs/calcu">CalcU</a> - A Calculus Course Aid (Huge Project)</li>
+	<li><a href="https://www.github.com/gbdubs/gradydocs">GradyDocs</a> - A GoogleDocs for the sloppy</li>
+	<li><a href="https://www.github.com/gbdubs/student-union">Student Union</a> - The Brandeis SU Website</li>
+	<li><a href="https://www.github.com/gbdubs/whatshouldmaddiedo">WhatShouldMaddieDo</a> - A tool for the indecisive</li>
+	<li><a href="https://www.github.com/gbdubs/AiScienceTest">AIScienceTest</a> - Experimentation with Google's Tensor Flow</li>
+	<li><a href="https://www.github.com/gbdubs/personal">Personal</a> - This Website!</li>
+	<li><a href="https://www.github.com/gbdubs">And More</a>!</li>
+</ul>
 
-        <div id="about-screen" class="screen opacity-0 hidden" data-color="yellow">
-            <h1><i>About Me</i></h1>
-            
-            <h2>Who Am I? What is my deal?<h2>
-            
-            <h3>Background : Essex (Junction), Vermont<h3>
-            <h3>Student : Brandeis University '16<h3>
-            <h3>Majors : Computer Science (BS), Economics, Math<h3>
-            <h3>Department : Seven Semester TA, Research, Thesis<h3>
-            <h3>Bonus : Student Union, Cross Country + Track, PBK<h3>
-            <h3>Interests : Educational Technology, Graph Theory</h3></h3>
-            <br>
-                
-            <h3><a href="/resume.pdf">Resume</a></h3></h3>
-        
-            <p>
-                The best times in my life have been when I get to explore things that confuse and excite me.
-                That manifests as learning new programming techniques, pursuing lofty running ambitions, and
-                dreaming up technologies and problems that don't yet exist. The pursuit of novel things is the
-                thing I enjoy above all else.
-            </p>
-            <br>    
-            <p>
-                I am a firm believer in Bus/Plane/Train conversations.  In intentionally and deliberatley
-                extending toll booth workers a conversation.  In the beauty and importance of our stories,
-                memories, and dreams. As such, I love first dates, fiction, and the New York Times. I have
-                no opinions on prestige, fashion, or oxford commas.
-            </p>
-            <br>
-            <p>
-                Dirt roads, shoes, and pencils number amoung my favorite things.  A territorial Vermonter,
-                I drink Cider, then wine, then beer.  Casual political remarks will always be questioned,
-                never dismissed.
-            </p>
-                
-            <div>
-                <div id="about-home" data-page-link="home" class="square button bg-red"><span>Home</span></div>
-                <div id="about-projects" data-page-link="projects" class="square button bg-blue"><span>Projects</span></div>
-                <div id="about-contact" data-page-link="contact" class="square button bg-green"><span>Contact</span></div>
-            </div>
-        </div>
-
-        <div id="projects-screen" class="screen opacity-0 hidden" data-color="blue">
-            <h1><i>Projects.</i></h1>
-            <h2>Active projects are avaible on <a href="https://www.github.com/gbdubs">Github</a>!<h2>
-            <div>
-                <div id="projects-home" data-page-link="home" class="square button bg-red"><span>Home</span></div>
-                <div id="projects-about" data-page-link="about" class="square button bg-yellow"><span>About</span></div>
-                <div id="projects-contact" data-page-link="contact" class="square button bg-green"><span>Contact</span></div>
-            </div>
-        </div>
-
-        <div id="contact-screen" class="screen opacity-0 hidden" data-color="green">
-            <h1><i>Contact Me</i></h1>
-            
-            <h2>Questions? Concerns? Ideas? Jobs?<h2>
-            
-            <h3>Email : grady.b.ward@gmail.com</h3>
-            <h3>Cell : (802) 503 - 5201</h3>
-            <h3>Mail : MB 2915 Brandeis University, Waltham MA</h3>
-            <h3>Github : www.github.com/gbdubs</h3>
-            <h3>Facebook : www.facebook.com/presidentward</h3>
-            <h3>LinkedIn : www.linkedin.com/pub/grady-ward/7a/1b7/66</h3>
-            <h3>Snapchat : gradyisthename</h3>
-            <h3>Site : gradybward.com</h3>
-            <div>
-                <div id="contact-home" data-page-link="home" class="square button bg-red"><span>Home</span></div>
-                <div id="contact-about" data-page-link="about" class="square button bg-yellow"><span>About</span></div>
-                <div id="contact-projects" data-page-link="projects" class="square button bg-blue"><span>Projects</span></div>
-            </div>
-        </div>
-    </body>
-        
-
-    <script>
-
-function setupLoadingScreen(){function e(){return"bg-"+colors[Math.floor(colors.length*Math.random())]}function t(e,t,n){n.style.cssText="bottom:"+(SQUARE_SIZE+GUTTER)*t+"px;left:"+(SQUARE_SIZE+GUTTER)*e+"px;"}function n(n,o,i){var s=document.getElementById("square-template"),a=s.cloneNode(!0);return a.className="square opacity-0 decoration "+e(),i?(a.className="square opacity-1 decoration bg-"+CENTER_COLOR,a.id="center-square"):a.id="grid-"+n+"-"+o,t(n,o,a),document.getElementById("square-container").appendChild(a),a}function o(e){for(var t,n,o=e.length;0!==o;)n=Math.floor(Math.random()*o),o-=1,t=e[o],e[o]=e[n],e[n]=t;return e}function i(){function e(e,t,n){var o=Math.sqrt(Math.pow(e[0]-t[0],2)+Math.pow(e[1]-t[1],2)),i=Math.sqrt(Math.pow(t[0]-n[0],2)+Math.pow(t[1]-n[1],2)),s=Math.sqrt(Math.pow(n[0]-e[0],2)+Math.pow(n[1]-e[1],2));if(0==o||0==i||0==s)return 0;var a=(o+i+s)/2,r=Math.max(a*(a-o)*(a-i)*(a-s),0),c=.5*Math.sqrt(r);return c}for(var t=[],o=-g;d+l>=o;o++)for(var i=-g;d+l>=i;i++){var s=e(u,m,[o,i]),a=e(m,f,[o,i]),r=e(f,h,[o,i]),c=e(h,u,[o,i]),E=s+a+r+c,y=l*d;if(Math.abs(E-y)<2){var T=o==v&&i==p,I=n(o,i,T);t.push(I)}}return t}function s(e){for(var t=0;e>t;t++){var n=T++;n<E.length&&setTimeout(makeVisible,100*t,E[n])}}function a(e){b--,0==b?(s(y/I),s(y),setTimeout(function(){document.getElementById("center-square").className+=" no-animation"},1e3),setTimeout(function(){document.getElementById("center-square").className+=" expanding"},2600),setTimeout(function(){setBackgroundColor(CENTER_COLOR)},3900),setTimeout(function(){var e=document.getElementById("square-container");e.parentNode.removeChild(e)},4e3),setTimeout(e,4100)):s(y/I)}window.scrollTo(0,0);var r=window.innerWidth,c=window.innerHeight,l=Math.ceil((r-(SQUARE_SIZE+GUTTER)/2)/(Math.sqrt(2)*(SQUARE_SIZE+GUTTER))),d=Math.ceil(c/(Math.sqrt(8)*(SQUARE_SIZE+GUTTER)))+2,u=[0,0],m=[d,d],f=[d+l,d-l],h=[l,0-l];console.log(u),console.log(m),console.log(f),console.log(h);var g=Math.max(d,l),v=Math.floor(f[0]/2),p=Math.floor(f[1]/2);console.log(v+"-"+p);var E=i();window.scrollTo(0,0);var y=E.length;o(E);var T=0,I=8,b=8;return a}function getRidOfHiddenOnScreen(e){e.classList.remove("hidden")}function makeScreenVisible(e){var t=e.id.substring(0,e.id.indexOf("-"));for(var n in screens)screens[n]==t?makeVisibleById(screens[n]+"-screen"):makeInvisibleById(screens[n]+"-screen")}function makeVisible(e){e.classList.remove("opacity-0"),e.classList.remove("hidden"),e.classList.contains("opacity-1")||e.classList.add("opacity-1")}function makeVisibleById(e){var t=document.getElementById(e);makeVisible(t)}function makeInvisibleById(e){var t=document.getElementById(e);t.classList.remove("opacity-1"),t.classList.contains("hidden")||t.classList.add("hidden"),t.classList.contains("opacity-0")||t.classList.add("opacity-0"),setTimeout(function(){t.classList.add("hidden")},1e3)}function setBackgroundColor(e){var t=document.getElementById("body");for(var n in colors)t.classList.remove("bg-"+colors[n]);t.classList.remove("bg-white"),t.classList.add("bg-"+e)}function expandOutButton(e){var t=e.cloneNode();t.classList.add("expanding"),e.parentNode.appendChild(t);var n=e.getBoundingClientRect(),o=n.top,i=n.left;t.style.height="100px",t.style.width="100px",t.style.top=o+"px",t.style.left=i+"px",setTimeout(function(){t.style.top=0,t.style.left=0,t.style.height="100vh",t.style.width="100vw"},10),setTimeout(function(){t.parentNode.removeChild(t)},810)}function navigateFromButton(e){expandOutButton(e);var t=document.getElementById(e.getAttribute("data-page-link")+"-screen"),n=t.getAttribute("data-color");getRidOfHiddenOnScreen(t),setTimeout(function(){setBackgroundColor(n),window.scrollTo(0,0),makeScreenVisible(t)},810)}for(var SQUARE_SIZE=100,GUTTER=10,CENTER_COLOR="red",colors=["blue","red","green","yellow"],runWhenFileComesIn=setupLoadingScreen(),i=0;4500>=i;i+=570)setTimeout(runWhenFileComesIn,i,function(){makeVisibleById("home-screen")});var screens=["home","about","projects","contact"];for(var from in screens)for(var to in screens)if(from!=to){var element=document.getElementById(screens[from]+"-"+screens[to]);element.addEventListener("click",function(){navigateFromButton(this)})}
-        
-        // GOGLE WEB FONTS.
-        
-        WebFontConfig = {
-            google: { families: [ 'Cardo:400,400italic,700:latin' ] }
-        };
-        (function() {
-            var wf = document.createElement('script');
-            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-         })();
-        
-    </script>
+<div>
+<div id="projects-home" data-page-link="home" class="square button bg-red"><span>Home</span></div>
+<div id="projects-about" data-page-link="about" class="square button bg-purple"><span>About</span></div>
+<div id="projects-contact" data-page-link="contact" class="square button bg-green"><span>Contact</span></div>
+</div>
+</div>
+<div id="contact-screen" class="screen opacity-0 hidden" data-color="green">
+<h1><i>Contact Me</i></h1>
+<h2>Questions? Concerns? Ideas? Jobs?<h2>
+<h3>Email : grady.b.ward@gmail.com</h3>
+<h3>Cell : (802) 503 - 5201</h3>
+<h3>Mail : MB 2915 Brandeis University, Waltham MA</h3>
+<h3>Github : www.github.com/gbdubs</h3>
+<h3>Facebook : www.facebook.com/presidentward</h3>
+<h3>LinkedIn : www.linkedin.com/pub/grady-ward/7a/1b7/66</h3>
+<h3>Snapchat : gradyisthename</h3>
+<h3>Site : gradybward.com</h3>
+<div>
+<div id="contact-home" data-page-link="home" class="square button bg-red"><span>Home</span></div>
+<div id="contact-about" data-page-link="about" class="square button bg-purple"><span>About</span></div>
+<div id="contact-projects" data-page-link="projects" class="square button bg-blue"><span>Projects</span></div>
+</div>
+</div>
+</body>
+<script>/*<![CDATA[*/function setupLoadingScreen(){function O(){return"bg-"+colors[Math.floor(colors.length*Math.random())]}function A(b,a,c){c.style.cssText="bottom:"+(SQUARE_SIZE+GUTTER)*a+"px;left:"+(SQUARE_SIZE+GUTTER)*b+"px;"}function G(f,e,c){var d=document.getElementById("square-template"),b=d.cloneNode(!0);return b.className="square opacity-0 decoration "+O(),c?(b.className="square opacity-1 decoration bg-"+CENTER_COLOR,b.id="center-square"):b.id="grid-"+f+"-"+e,A(f,e,b),document.getElementById("square-container").appendChild(b),b}function F(b){for(var a,d,c=b.length;0!==c;){d=Math.floor(Math.random()*c),c-=1,a=b[c],b[c]=b[d],b[d]=a}return b}function K(){function h(V,Y,I){var E=Math.sqrt(Math.pow(V[0]-Y[0],2)+Math.pow(V[1]-Y[1],2)),T=Math.sqrt(Math.pow(Y[0]-I[0],2)+Math.pow(Y[1]-I[1],2)),Z=Math.sqrt(Math.pow(I[0]-V[0],2)+Math.pow(I[1]-V[1],2));if(0==E||0==T||0==Z){return 0}var X=(E+T+Z)/2,y=Math.max(X*(X-E)*(X-T)*(X-Z),0),W=0.5*Math.sqrt(y);return W}for(var u=[],d=-M;P+J>=d;d++){for(var g=-M;P+J>=g;g++){var U=h(x,H,[d,g]),n=h(H,N,[d,g]),b=h(N,L,[d,g]),l=h(L,x,[d,g]),v=U+n+b+l,m=J*P;if(Math.abs(v-m)<2){var f=d==w&&g==D,p=G(d,g,f);u.push(p)}}}return u}function B(b){for(var a=0;b>a;a++){var c=j++;c<z.length&&setTimeout(makeVisible,100*a,z[c])}}function S(a){R--,0==R?(B(k/q),B(k),setTimeout(function(){document.getElementById("center-square").className+=" no-animation"},1000),setTimeout(function(){document.getElementById("center-square").className+=" expanding"},2600),setTimeout(function(){setBackgroundColor(CENTER_COLOR)},3900),setTimeout(function(){var b=document.getElementById("square-container");b.parentNode.removeChild(b)},4000),setTimeout(a,4100)):B(k/q)}window.scrollTo(0,0);var C=window.innerWidth,Q=window.innerHeight,J=Math.ceil((C-(SQUARE_SIZE+GUTTER)/2)/(Math.sqrt(2)*(SQUARE_SIZE+GUTTER))),P=Math.ceil(Q/(Math.sqrt(8)*(SQUARE_SIZE+GUTTER)))+2,x=[0,0],H=[P,P],N=[P+J,P-J],L=[J,0-J];var M=Math.max(P,J),w=Math.floor(N[0]/2),D=Math.floor(N[1]/2);var z=K();window.scrollTo(0,0);var k=z.length;F(z);var j=0,q=8,R=8;return S}function getRidOfHiddenOnScreen(a){a.classList.remove("hidden")}function makeScreenVisible(b){var a=b.id.substring(0,b.id.indexOf("-"));for(var c in screens){screens[c]==a?makeVisibleById(screens[c]+"-screen"):makeInvisibleById(screens[c]+"-screen")}}function makeVisible(a){a.classList.remove("opacity-0"),a.classList.remove("hidden"),a.classList.contains("opacity-1")||a.classList.add("opacity-1")}function makeVisibleById(b){var a=document.getElementById(b);makeVisible(a)}function makeInvisibleById(b){var a=document.getElementById(b);a.classList.remove("opacity-1"),a.classList.contains("hidden")||a.classList.add("hidden"),a.classList.contains("opacity-0")||a.classList.add("opacity-0"),setTimeout(function(){a.classList.add("hidden")},1000)}function setBackgroundColor(b){var a=document.getElementById("body");for(var c in colors){a.classList.remove("bg-"+colors[c])}a.classList.remove("bg-white"),a.classList.add("bg-"+b)}function expandOutButton(c){var b=c.cloneNode();b.classList.add("expanding"),c.parentNode.appendChild(b);var f=c.getBoundingClientRect(),d=f.top,a=f.left;b.style.height="100px",b.style.width="100px",b.style.top=d+"px",b.style.left=a+"px",setTimeout(function(){b.style.top=0,b.style.left=0,b.style.height="100vh",b.style.width="100vw"},10),setTimeout(function(){b.parentNode.removeChild(b)},810)}function navigateFromButton(b){expandOutButton(b);var a=document.getElementById(b.getAttribute("data-page-link")+"-screen"),c=a.getAttribute("data-color");getRidOfHiddenOnScreen(a),setTimeout(function(){setBackgroundColor(c),window.scrollTo(0,0),makeScreenVisible(a)},810)}for(var SQUARE_SIZE=100,GUTTER=10,CENTER_COLOR="red",colors=["blue","red","green","purple","orange"],runWhenFileComesIn=setupLoadingScreen(),i=0;4500>=i;i+=570){setTimeout(runWhenFileComesIn,i,function(){makeVisibleById("home-screen")})}var screens=["home","about","projects","contact"];for(var from in screens){for(var to in screens){if(from!=to){var element=document.getElementById(screens[from]+"-"+screens[to]);element.addEventListener("click",function(){navigateFromButton(this)})}}}WebFontConfig={google:{families:["Cardo:400,400italic,700:latin"]}};(function(){var a=document.createElement("script");a.src=("https:"==document.location.protocol?"https":"http")+"://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js";a.type="text/javascript";a.async="true";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();/*]]>*/</script>
 </html>
