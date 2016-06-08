@@ -1,103 +1,147 @@
 <html>
-<head>
-<style>body{font-family:Cardo,serif;color:white;text-align:center;text-shadow:-1px -2px rgba(0,0,0,0.2)}a{color: inherit;}ul{text-align:left;display:inline-block}li{font-size:1.5em;padding:1em}h1{padding-top:1em;font-size:6em}h2{font-size:3em}p{max-width:600px;text-align:left;display:inline-block;padding:5px}.thin{font-weight:100}.opacity-0{opacity:0}.opacity-1{opacity:1}.bg-blue{background:#17419B}.bg-purple{background:#5F0D96}.bg-red{background:#B72D00}.bg-orange{background:#D8A200}.bg-white{background:#F7FFF4}.bg-green{background:#1C8200}.square{height:100px;width:100px;position:relative;box-shadow:0 2px 5px 2px rgba(0,0,0,0.2);border-radius:3px}.square.decoration{position:absolute;transition:opacity 2s ease-in}#square-container{width:0;height:0;overflow:visible;position:absolute;padding:0;margin:0;bottom:-70px;left:-20px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);}#center-square{transition:height 1.5s ease-in,width 1.5s ease-in,margin 1.5s ease-in;animation:spin 5s linear infinite;z-index:10}#center-square.expanding{animation:none;height:3000px;width:3000px;z-index:10;margin:-1500px -1500px}.screen{transition:opacity 2s}.square.button{position:relative;display:inline-block;margin:10px;text-align:center;cursor:pointer}.square.button:hover{box-shadow:0 3px 10px 5px rgba(0,0,0,0.15)}.square.button>span{display:inline-block;padding-top:36px;font-size:20px}.square.button.expanding{position:fixed;margin:0;transition:height .8s ease-in,width .8s ease-in,top .8s ease-in,left .8s ease-in}.no-animation{animation:none!important}.hidden{display:none}// --- \\ SPINNING FRAMES // --- \\ @-ms-keyframes spin{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}@-moz-keyframes spin{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}@-webkit-keyframes spin{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}@keyframes spin{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}</style>
-</head>
-<body id="body" class="bg-white">
-<div id="square-template" class="square bg-blue" style="display:none"></div>
-<div id="square-container"></div>
-<div id="home-screen" class="screen opacity-0 hidden" data-color="red">
-<h1><i>Passionate Projects.</i></h1>
-<h2>Inquisitive, Intuitive, Intentional.</h2>
-<ul>
-<li>Lightweight, Intuitive UX that Delights and Surprises</li>
-<li>Theoretical Forrays in Graph Isomorphism, Tree Enumeration, Vector Sorting</li>
-<li>Full Stack Web-Development in Python, Node and Java on Google and Amazon Clouds</li>
-<li>Smart Unit Tests</li>
-</ul>
-<h2>Welcome to my portfolio.</h2>
-<br/>
-<div>
-<div id="home-about" data-page-link="about" class="square button bg-purple"><span>About</span></div>
-<div id="home-projects" data-page-link="projects" class="square button bg-blue"><span>Projects</span></div>
-<div id="home-contact" data-page-link="contact" class="square button bg-green"><span>Contact</span></div>
-</div>
-</div>
-<div id="about-screen" class="screen opacity-0 hidden" data-color="purple">
-<h1><i>About Me</i></h1>
-<h2>Who Am I?</h2>
-<h3>Background : Essex (Junction), Vermont</h3>
-<h3>Student : Brandeis University '16</h3>
-<h3>Majors : Computer Science (BS), Economics, Math</h3>
-<h3>Department : Seven Semester TA, Research, Thesis</h3>
-<h3>Extra : Student Union, Cross Country + Track, PBK</h3>
-<h3>Interests : Educational Technology, Graph Theory</h3>
-<h3>Next : Working at Google in Mountain View (August)</h3>
-<br>
-<h3><a href="/resume.pdf">Resume</a></h3></h3>
-<p>
-The best times in my life have been when I get to explore things that confuse and excite me.
-That manifests as learning new programming techniques, pursuing mile times, and
-dreaming up technologies, problems, and solutions.
-</p>
-<br>
-<p>
-I am a firm believer in Bus/Plane/Train conversations. In intentionally and deliberatley
-extending toll booth workers a conversation. In the beauty and importance of our stories and
-memories. As such, I love first dates, podcasts, and the New York Times. I have
-no opinions on fame, fashion, or oxford commas.
-</p>
-<br>
-<p>
-Dirt roads, shoes, and engineering notebooks number amoung my favorite things. A territorial Vermonter, I drink cider, then wine, then beer. Casual political remarks are never ignored.
-</p>
-<div>
-<div id="about-home" data-page-link="home" class="square button bg-red"><span>Home</span></div>
-<div id="about-projects" data-page-link="projects" class="square button bg-blue"><span>Projects</span></div>
-<div id="about-contact" data-page-link="contact" class="square button bg-green"><span>Contact</span></div>
-</div>
-</div>
-<div id="projects-screen" class="screen opacity-0 hidden" data-color="blue">
-<h1><i>Projects</i></h1>
-<h2>Active projects are avaible on <a href="https://www.github.com/gbdubs">Github</a>!<h2>
-<h3>WIP Highlights</h3>
-<ul>
-	<li><a href="https://www.github.com/gbdubs/thesis">Thesis</a> - My Thesis on teh Graph Isomorphism Problem</li>
-	<li><a href="https://www.github.com/gbdubs/graphfyi">GraphFYI</a> - A Truly Random Graph Generator and Database</li>
-</ul>
-<h3>Completed Highlights</h3>
-<ul>
-	<li><a href="https://www.github.com/gbdubs/calcu">CalcU</a> - A Calculus Course Aid (Huge Project)</li>
-	<li><a href="https://www.github.com/gbdubs/gradydocs">GradyDocs</a> - A GoogleDocs for the sloppy</li>
-	<li><a href="https://www.github.com/gbdubs/student-union">Student Union</a> - The Brandeis SU Website</li>
-	<li><a href="https://www.github.com/gbdubs/whatshouldmaddiedo">WhatShouldMaddieDo</a> - A tool for the indecisive</li>
-	<li><a href="https://www.github.com/gbdubs/AiScienceTest">AIScienceTest</a> - Experimentation with Google's Tensor Flow</li>
-	<li><a href="https://www.github.com/gbdubs/personal">Personal</a> - This Website!</li>
-	<li><a href="https://www.github.com/gbdubs">And More</a>!</li>
-</ul>
-
-<div>
-<div id="projects-home" data-page-link="home" class="square button bg-red"><span>Home</span></div>
-<div id="projects-about" data-page-link="about" class="square button bg-purple"><span>About</span></div>
-<div id="projects-contact" data-page-link="contact" class="square button bg-green"><span>Contact</span></div>
-</div>
-</div>
-<div id="contact-screen" class="screen opacity-0 hidden" data-color="green">
-<h1><i>Contact Me</i></h1>
-<h2>Questions? Concerns? Ideas? Jobs?<h2>
-<h3>Email : grady.b.ward@gmail.com</h3>
-<h3>Cell : (802) 503 - 5201</h3>
-<h3>Mail : MB 2915 Brandeis University, Waltham MA</h3>
-<h3>Github : www.github.com/gbdubs</h3>
-<h3>Facebook : www.facebook.com/presidentward</h3>
-<h3>LinkedIn : www.linkedin.com/pub/grady-ward/7a/1b7/66</h3>
-<h3>Snapchat : gradyisthename</h3>
-<h3>Site : gradybward.com</h3>
-<div>
-<div id="contact-home" data-page-link="home" class="square button bg-red"><span>Home</span></div>
-<div id="contact-about" data-page-link="about" class="square button bg-purple"><span>About</span></div>
-<div id="contact-projects" data-page-link="projects" class="square button bg-blue"><span>Projects</span></div>
-</div>
-</div>
-</body>
-<script>/*<![CDATA[*/function setupLoadingScreen(){function O(){return"bg-"+colors[Math.floor(colors.length*Math.random())]}function A(b,a,c){c.style.cssText="bottom:"+(SQUARE_SIZE+GUTTER)*a+"px;left:"+(SQUARE_SIZE+GUTTER)*b+"px;"}function G(f,e,c){var d=document.getElementById("square-template"),b=d.cloneNode(!0);return b.className="square opacity-0 decoration "+O(),c?(b.className="square opacity-1 decoration bg-"+CENTER_COLOR,b.id="center-square"):b.id="grid-"+f+"-"+e,A(f,e,b),document.getElementById("square-container").appendChild(b),b}function F(b){for(var a,d,c=b.length;0!==c;){d=Math.floor(Math.random()*c),c-=1,a=b[c],b[c]=b[d],b[d]=a}return b}function K(){function h(V,Y,I){var E=Math.sqrt(Math.pow(V[0]-Y[0],2)+Math.pow(V[1]-Y[1],2)),T=Math.sqrt(Math.pow(Y[0]-I[0],2)+Math.pow(Y[1]-I[1],2)),Z=Math.sqrt(Math.pow(I[0]-V[0],2)+Math.pow(I[1]-V[1],2));if(0==E||0==T||0==Z){return 0}var X=(E+T+Z)/2,y=Math.max(X*(X-E)*(X-T)*(X-Z),0),W=0.5*Math.sqrt(y);return W}for(var u=[],d=-M;P+J>=d;d++){for(var g=-M;P+J>=g;g++){var U=h(x,H,[d,g]),n=h(H,N,[d,g]),b=h(N,L,[d,g]),l=h(L,x,[d,g]),v=U+n+b+l,m=J*P;if(Math.abs(v-m)<2){var f=d==w&&g==D,p=G(d,g,f);u.push(p)}}}return u}function B(b){for(var a=0;b>a;a++){var c=j++;c<z.length&&setTimeout(makeVisible,100*a,z[c])}}function S(a){R--,0==R?(B(k/q),B(k),setTimeout(function(){document.getElementById("center-square").className+=" no-animation"},1000),setTimeout(function(){document.getElementById("center-square").className+=" expanding"},2600),setTimeout(function(){setBackgroundColor(CENTER_COLOR)},3900),setTimeout(function(){var b=document.getElementById("square-container");b.parentNode.removeChild(b)},4000),setTimeout(a,4100)):B(k/q)}window.scrollTo(0,0);var C=window.innerWidth,Q=window.innerHeight,J=Math.ceil((C-(SQUARE_SIZE+GUTTER)/2)/(Math.sqrt(2)*(SQUARE_SIZE+GUTTER))),P=Math.ceil(Q/(Math.sqrt(8)*(SQUARE_SIZE+GUTTER)))+2,x=[0,0],H=[P,P],N=[P+J,P-J],L=[J,0-J];var M=Math.max(P,J),w=Math.floor(N[0]/2),D=Math.floor(N[1]/2);var z=K();window.scrollTo(0,0);var k=z.length;F(z);var j=0,q=8,R=8;return S}function getRidOfHiddenOnScreen(a){a.classList.remove("hidden")}function makeScreenVisible(b){var a=b.id.substring(0,b.id.indexOf("-"));for(var c in screens){screens[c]==a?makeVisibleById(screens[c]+"-screen"):makeInvisibleById(screens[c]+"-screen")}}function makeVisible(a){a.classList.remove("opacity-0"),a.classList.remove("hidden"),a.classList.contains("opacity-1")||a.classList.add("opacity-1")}function makeVisibleById(b){var a=document.getElementById(b);makeVisible(a)}function makeInvisibleById(b){var a=document.getElementById(b);a.classList.remove("opacity-1"),a.classList.contains("hidden")||a.classList.add("hidden"),a.classList.contains("opacity-0")||a.classList.add("opacity-0"),setTimeout(function(){a.classList.add("hidden")},1000)}function setBackgroundColor(b){var a=document.getElementById("body");for(var c in colors){a.classList.remove("bg-"+colors[c])}a.classList.remove("bg-white"),a.classList.add("bg-"+b)}function expandOutButton(c){var b=c.cloneNode();var f=c.getBoundingClientRect(),d=f.top,a=f.left;c.parentNode.appendChild(b);b.style.height="100px",b.style.width="100px",b.style.top=d+"px",b.style.left=a+"px";b.classList.add("expanding");setTimeout(function(){b.style.top=0,b.style.left=0,b.style.height="100vh",b.style.width="100vw"},10),setTimeout(function(){b.parentNode.removeChild(b)},810)}function navigateFromButton(b){expandOutButton(b);var a=document.getElementById(b.getAttribute("data-page-link")+"-screen"),c=a.getAttribute("data-color");getRidOfHiddenOnScreen(a),setTimeout(function(){setBackgroundColor(c),window.scrollTo(0,0),makeScreenVisible(a)},810)}for(var SQUARE_SIZE=100,GUTTER=10,CENTER_COLOR="red",colors=["blue","red","green","purple","orange"],runWhenFileComesIn=setupLoadingScreen(),i=0;4500>=i;i+=570){setTimeout(runWhenFileComesIn,i,function(){makeVisibleById("home-screen")})}var screens=["home","about","projects","contact"];for(var from in screens){for(var to in screens){if(from!=to){var element=document.getElementById(screens[from]+"-"+screens[to]);element.addEventListener("click",function(){navigateFromButton(this)})}}}WebFontConfig={google:{families:["Cardo:400,400italic,700:latin"]}};(function(){var a=document.createElement("script");a.src=("https:"==document.location.protocol?"https":"http")+"://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js";a.type="text/javascript";a.async="true";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();/*]]>*/</script>
+   <head>
+      <link href='https://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
+      <link href='style.css' rel='stylesheet' type='text/css'>
+      <link href='output.min.css' rel='stylesheet' type='text/css'>
+   </head>
+   <body>
+      <div class="title-wrapper dm-border-width-5">
+         <div class="title dm-ccw-lb dm dm-delay-1-00">
+            Grady Ward        
+            <div class="decoration-a dm dm-ccw-rt dm-delay-2-00 dm-border-color-DE1718"></div>
+            <div class="decoration-b dm dm-cw-tr dm-delay-4-00 dm-border-color-DE1718">
+               <div class="decoration-c dm dm-ccw-l dm-delay-3-00 dm-border-color-DE1718"></div>
+            </div>
+         </div>
+         <div class="subtitle dm-cw-rb dm dm-delay-2-00">
+            Engineer        
+            <div class="menu">
+              <a href="mailto:grady.b.ward@gmail.com" class="item dm dm-ccw-tlb dm-delay-3-00">Contact</a>
+              <a class="item dm dm-ccw-lbr dm-delay-3-75 no-top">About<div class="menu-selector-d dm dm-ccw-br dm-delay-0-00"></div></a>
+              <a href="https://www.linkedin.com/in/gradyward" target="_blank" class="item dm dm-ccw-lb dm-delay-4-25 no-top">LinkedIn</a>
+              <a href="https://www.github.com/gbdubs" target="_blank"  class="item dm dm-ccw-lb dm-delay-4-75 no-top">Github</a>
+              <a class="item dm dm-cw-rbl dm-delay-5-75 no-top">Portfolio<div class="menu-selector-c dm dm-ccw-br dm-delay-0-00"></div></a>
+            </div>
+            <div id="portfolio-lines" class="menu-selector-a dm dm-cw-tr dm-delay-1-00"><div class="menu-selector-b dm dm-ccw-tl dm-delay-2-00"></div></div>
+            <div id="about-lines" class="menu-selector-a dm dm-cw-tr dm-delay-1-00"><div class="menu-selector-b dm dm-ccw-tl dm-delay-2-00"></div></div>
+            <div class="decoration-i dm-delay-3-00 dm dm-ccw-lb dm-border-color-EFBD26"></div>
+            <div class="decoration-j dm-delay-4-00 dm dm-cw-rb dm-border-color-EFBD26"></div>
+         </div>
+         <div class="decoration-d dm dm-cw-rb dm-delay-3-00 dm-border-color-1C55BF">
+            <div class="decoration-e dm dm-ccw-lb dm-delay-4-00 dm-border-color-1C55BF">
+               <div class="dm-delay-5-00 dm-border-color-1C55BF decoration-f dm dm-cw-lt"></div>
+            </div>
+         </div>
+         <div class="decoration-g dm-delay-3-00 dm dm-ccw-rt dm-border-color-EFBD26"></div>
+         <div class="decoration-h dm-delay-4-00 dm dm-ccw-tlb dm-border-color-EFBD26"></div>
+      </div><br><div id="about-wrapper" class="about-wrapper dm-border-width-5"> 
+        <div class="about dm dm-delay-4-00 dm-ccw-lbr">
+          <div class="about-title dm dm-delay-3-00 dm-ccw-tl">About</div>
+          <div class="about-description">
+            <div class="about-image dm dm-delay-4-75 dm-cw-blt"><img src="grady.jpg"></div>
+            <p>
+              Grady Ward is a recent college graduate from Brandeis University. In August, he is moving to the Bay Area as a software engineer for Google. In the past he has worked for edX, Jumpstart and Brandeis' Student Union.
+            </p><p>
+              Before moving to San Francisco, he is spending the summer reading, writing, working on some fun projects, and spending time with family. On the summer reading list: "Mules and Men", "Gorilla, My Love", "The Kite Runner", "I am Malala", and "I Know Why the Caged Bird Sings".
+            </p><p>
+              He has worked extensively in web development as a full stack developer, on Node, Python and Java stacks, over the Amazon and Google clouds. His research interests have centered on computational complexity and algorithm design.
+            </p><p>
+              In his spare time, he enjoys running, origami, hiking and reading.
+            </p>
+          </div>
+        </div>
+      </div><div id="portfolio-wrapper" class="portfolio-wrapper dm-border-width-5"> 
+        <div class="portfolio dm dm-delay-4-00 dm-ccw-l">
+          <div class="portfolio-title dm dm-delay-3-00 dm-ccw-tl">Portfolio</div>
+          <div class="portfolio-item">
+            <span class="name dm dm-delay-4-00 dm-cw-tr">
+              Senior Thesis
+            </span><a target="_blank" href="https://github.com/gbdubs/thesis" class="code dm dm-delay-4-75 dm-cw-tr">
+              Code
+            </a><a target="_blank" href="https://github.com/gbdubs/thesis/raw/master/Documentation%20%2B%20Reports/THESIS/thesis.pdf" class="result dm dm-delay-5-25 dm-cw-tr">
+              Result
+            </a>
+            <div class="description dm dm-delay-4-00 dm-ccw-br">
+              A senior honors thesis on the graph isomorphism problem, and the ways that that problem impacts related questions of random graph generation, theoretical analysis of associated problems, and an invariant for analysis called the "cycles" invariant, which counts the number of closed walks through each vertex in a graph. Work primarily uses C (for computationally expensive operations) and Matlab (for visualization and small set analysis). In May 2016, this work received Highest Honors from Brandeis University, and won the "Computer Science Prize for Outstanding Achievement".
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <span class="name dm dm-delay-4-25 dm-cw-tr">
+              CalcU
+            </span><a target="_blank"  href="https://github.com/gbdubs/calcu" class="code dm dm-delay-5-00 dm-cw-tr">
+              Code
+            </a><a target="_blank"  href="http://calcu.education" class="result dm dm-delay-5-50 dm-cw-tr">
+              Result
+            </a>
+            <div class="description dm dm-delay-4-25 dm-ccw-br">
+              CalcU is a scalable, responsive and accessible web application that serves as a course aid for Calculus students. It scrapes the web for calculus resources, and uses user feedback alongside out of the box machine learning to direct students to problems, questions and content that best fits their learning needs and current understandings. Received a competitive SPARK grant to hire three interns for a summer of work, completed in August of 2015.
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <span class="name dm dm-delay-4-50 dm-cw-tr">
+              Draw Me CSS!
+            </span><a target="_blank" href="https://github.com/gbdubs/draw-me" class="code dm dm-delay-5-25 dm-cw-tr">
+              Code
+            </a><a target="_blank" class="result dm dm-delay-5-75 dm-cw-tr">
+              Result
+            </a>
+            <div class="description dm dm-delay-4-50 dm-ccw-br">
+              A tool for the dynamic generation of CSS styles which draw the borders of elements on the page to allow "pipe" animations to make it appear that the page is being drawn before the viewer (this page uses this library). Started small scale, trying to just get a single little circular border to work, then expanded up, adding support for border colors, thicknesses, dash-styles, animation speeds, animation delays, different edges, and different animation directions. To include every one of these options across every possible permutation would be a 3MB CSS file (not-optimal), so I built a web service that dynamically calculates the styles that are on each page, and only includes those styles. The result is a magical animation, which can be added to an existing bordered webpage in just minutes, with a CSS file that is typically under 1KB. Completed in July of 2016.
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <span class="name dm dm-delay-4-75 dm-cw-tr">
+              GradyDocs
+            </span><a target="_blank" href="https://github.com/gbdubs/gradydocs" class="code dm dm-delay-5-50 dm-cw-tr">
+              Code (No Server)
+            </a><a target="_blank" href="http://www.gradydocs.com/" class="result dm dm-delay-6-00 dm-cw-tr">
+              Result
+            </a>
+            <div class="description dm dm-delay-4-75 dm-ccw-br">
+              Grady Docs: GoogleDocs, but shittier! I worked on this project to teach myself NodeJS on a relatively easy problem. The project attempted to emulate the functionality of "GoogleDocs", which is a platform that allows collaborative editing across multiple computers. The final result uses a data-driven client-side editing methodology alongside websockets on the backend to deliver solid real-time simultaneous editing. Built in NodeJS over AWS. The problem is that a couple of people actually were trying to use it for shared text document storage (and my solution was highly inefficient in terms of storage), so the server time became materially expensive and I shut down the server, but left up the client facing elements. Started and completed over the winter holiday, December of 2015.
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <span class="name dm dm-delay-5-00 dm-cw-tr">
+              Student Union
+            </span><a target="_blank" href="https://github.com/gbdubs/StudentUnion" class="code dm dm-delay-5-75 dm-cw-tr">
+              Code
+            </a><a target="_blank" href="http:union.brandeis.io" class="result dm dm-delay-6-25 dm-cw-tr">
+              Result
+            </a>
+            <div class="description dm dm-delay-5-00 dm-ccw-br">
+              In the summer of 2015, I was tasked with creating a new Student Union website, which I did using a simple static page generator, to allow someone else to do the updates. Though this solution worked for the 2015-2016 academic year, unfortunately, it became apparent at the end of that year that the solution was too rigid to fit the ever changing needs of a student organization with a wide range of functions and sub-groups. To combat this, I created a web application which allows dynamic WYSIWYG editing of static pages, using GithubPages as the true static page server, and a Google App Engine backend to force authentication and allow metadata storage and page updates. The result has been widely used by all members of the Student Union, and provides a secure, version controlled way for every member to update, create and delete pages with no technical experience. Completed in April of 2016.
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <span class="name dm dm-delay-5-25 dm-cw-tr">
+              WSMD?
+            </span><a target="_blank" href="http://gbdubs.github.io/whatshouldmaddiedo/" class="result dm dm-delay-6-00 dm-cw-tr">
+              Result
+            </a>
+            <div class="description dm dm-delay-5-25 dm-ccw-br">
+              A tool for the indecisive, built in 2 hours as a challenge. November of 2015.
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <span class="name dm dm-delay-5-50 dm-cw-tr">
+              AI Science Test
+            </span><a target="_blank" href="https://github.com/gbdubs/AIScienceTest" class="code dm dm-delay-6-25 dm-cw-tr">
+              Code
+            </a>
+            <div class="description dm dm-delay-5-50 dm-ccw-br">
+              A machine-learning project for an AI class which competed on Kaggle and got in the top 20 out of 500+ teams. Simply used TensorFlow alongside some clever parameter domain space testing, using Wikipedia as a corpus text. My first experiment in ML. September of 2015.
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <span class="name dm dm-delay-5-75 dm-cw-tr">... Many More</span>
+            <div class="description dm dm-delay-5-75 dm-ccw-br">
+              These are just the most recent highlights of my coding life.  To check out the full range of what I have worked on in the last few years, check out <a target="_blank"href="http://www.github.com/gbdubs">my github profile</a>. 
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script src="script.js"></script>
+   </body>
 </html>
