@@ -1,3 +1,8 @@
+
+/* DRAWMECSS - By Grady Ward (grady.b.ward@gmail.com)  */
+/* Input file = [Personal/index.html], Today = [Sat Jul 16 21:06:48 EDT 2016] */
+/* Version = [1.0] , Calculation Time = [2.227s] */
+
 .dm-delay-1-00 .dm {
 	-moz-animation-delay : 1.00s;
 	-webkit-animation-delay : 1.00s;
@@ -147,6 +152,18 @@
 	-moz-animation-delay: 6.25s;
 	-webkit-animation-delay: 6.25s;
 	animation-delay: 6.25s;
+}
+
+.dm-delay-6-50.dm {
+	-moz-animation-delay: 6.50s;
+	-webkit-animation-delay: 6.50s;
+	animation-delay: 6.50s;
+}
+
+.dm-delay-7-00.dm {
+	-moz-animation-delay: 7.00s;
+	-webkit-animation-delay: 7.00s;
+	animation-delay: 7.00s;
 }
 
 .dm:before {
@@ -491,18 +508,24 @@
 	background: #EFBD26;
 }
 
-.dm-border-color-1C55BF,
-.dm-border-color-1C55BF .dm {
+.dm-border-color-1C55BF {
 	border-color: #1C55BF;
 }
 
-.dm-border-color-DE1718,
-.dm-border-color-DE1718 .dm {
+.dm-border-color-DE1718 {
 	border-color: #DE1718;
 }
 
 .dm-border-color-EFBD26 {
 	border-color: #EFBD26;
+}
+
+.dm-border-color-1C55BF .dm {
+	border-color: 1C55BF;
+}
+
+.dm-border-color-DE1718 .dm {
+	border-color: DE1718;
 }
 
 .dm-border-width-5,
