@@ -41,20 +41,21 @@
   display: inline-block;
   width: 35rem;
   max-width: Calc(100vw - 1rem);
-  /* min-width: 380px; */
   position: relative;
   margin-bottom: -.5rem;
-  height: Calc(100vh - 0rem);
-  /* min-height: Calc(100vw - 1rem); */
-  /* max-height: 30rem; */
+  height: 100vh;
+  max-height: 50rem;
+  min-height: 28.5rem;
 }
 
 .title{
   font-size: 3rem;
-  padding: Calc(100vh - 27rem) 0rem .5rem 1rem;
   display: block;
   text-align: left;
+  height: Calc(100% - 23rem);
 }
+
+.title.dm-ccw-lb.dm.dm-delay-1-00 {}
 
 .subtitle{
   float: right;
@@ -92,11 +93,10 @@
 }
 
 .decoration-c{
-    height: Calc(100vh - 28.5rem);
-    width: 100%;
-    right: 0;
+    height: Calc(100% - 5rem);
+    left: .5rem;
     position: absolute;
-    bottom: 3rem;
+    top: 0rem;
 }
 
 .decoration-d{
@@ -215,11 +215,6 @@
   height: 2.5rem;
 }
 
-.title {
-    height: 3rem;
-    padding-bottom: 1rem;
-}
-
 body{
   margin: 0;
   font-family: Lusitana, serif;
@@ -309,12 +304,28 @@ h1, h2, h3, h4, h5, h6, p, div, i {
     position: relative;
 }
 
-@keyframes image-animation{
-  0% { opacity: 0; }
-  70% { opacity: 0; }
-  100% { opacity: 1; }
+@media only screen { 
+  html {
+    font-size: 12px;
+  }
 }
 
-html {
-  font-size: 32px;
+@media only screen and (min-width: 400px) { 
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 20px;
+  }
+} 
+@media only screen and (min-width: 800px) { 
+  html {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1200px) { 
+
 }
