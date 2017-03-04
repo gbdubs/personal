@@ -21,6 +21,8 @@
   height: 1rem;
   text-decoration: none;
   cursor: pointer;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .menu > .item.selected {
@@ -66,6 +68,7 @@
   padding: .25rem 1rem 1.25rem 1rem;
   width: 10rem;
   height: 1rem;
+  line-height: 2rem;
 }
 
 .decoration-a,.decoration-b,.decoration-c,.decoration-d,.decoration-e,.decoration-f,.decoration-g,.decoration-h,.decoration-i,.decoration-j{
@@ -84,12 +87,13 @@
 }
 
 .decoration-b {
-    width: 17.5rem;
+    width: 18rem;
     height: 3rem;
     position: absolute;
     bottom: 0.5rem;
-    left: 1rem;
+    left: .5rem;
     z-index: -1;
+    line-height: 4rem;
 }
 
 .decoration-c{
@@ -217,7 +221,8 @@
 
 body{
   margin: 0;
-  font-family: Lusitana, serif;
+  font-family: Helvetica, sans-serif;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -304,6 +309,10 @@ h1, h2, h3, h4, h5, h6, p, div, i {
     position: relative;
 }
 
+.description, p {
+    font-weight: 400;
+}
+
 @media only screen { 
   html {
     font-size: 12px;
@@ -325,7 +334,4 @@ h1, h2, h3, h4, h5, h6, p, div, i {
   html {
     font-size: 24px;
   }
-}
-@media only screen and (min-width: 1200px) { 
-
 }
